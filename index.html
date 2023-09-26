@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Rust-Wasm App</title>
+  </head>
+  <body>
+    <h1>Hello, Rust-Wasm!</h1>
+    <script type="module">
+      import init, { greet } from "./pkg/rust_wasm_hello.js";
+
+      (async () => {
+        try {
+          // Instantiate our wasm module
+          await init("./pkg/rust_wasm_hello_bg.wasm");
+
+          // Call the greeting function export from wasm
+          greet("dev");
+        } catch (error) {
+          // Handle the errors gracefully
+          throw error;
+        }
+      })();
+    </script>
+  </body>
+</html>
