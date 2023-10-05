@@ -1,8 +1,11 @@
 [package]
 name = "rust-wasm-hello"
+description = "This is a Rust WASM minimal template"
 version = "0.1.0"
 authors = ["Celso Jr <celsojrfull@gmail.com>"]
 edition = "2018"
+repository = "https://github.com/celsojr/rust-wasm"
+license = "Apache or MIT"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
